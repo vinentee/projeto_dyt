@@ -1,0 +1,20 @@
+{{> layout }}
+<h1>Listas de Tarefas</h1>
+<form action="/lists" method="POST">
+    <input type="text" name="titulo_lista" placeholder="Nova lista" required>
+    <button type="submit">Criar Lista</button>
+</form>
+<ul>
+    {{#lists}}
+    <li>
+        <a href="/tasks/{{id}}">{{titulo_lista}}</a>
+        <span>{{completedTasks}} de {{totalTasks}} concluídas ({{completionPercentage}}%)</span>
+        <form action="/lists/delete/{{id}}" method="POST">
+            <button type="submit">Excluir</button>
+        </form>
+    </li>
+    {{/lists}}
+</ul>
+{{#error}}
+<p>{{error}}</p>
+{{/error}}
