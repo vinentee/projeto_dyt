@@ -1,0 +1,19 @@
+{{> layout }}
+<h1>Detalhes da Tarefa</h1>
+<form action="/tasks/detail/{{task.id}}" method="POST">
+    <label for="titulo">Título:</label>
+    <input type="text" name="titulo_tarefa" value="{{task.titulo_tarefa}}" required>
+    <label for="data">Data de Conclusão:</label>
+    <input type="date" name="data_conclusao" value="{{task.data_conclusao}}">
+    <label for="descricao">Descrição:</label>
+    <textarea name="descricao">{{task.descricao}}</textarea>
+    <label for="concluida">Concluída:</label>
+    <input type="checkbox" name="concluida" {{#task.concluida}}checked{{/task.concluida}}>
+    <button type="submit">Salvar</button>
+</form>
+<form action="/tasks/delete/{{task.id}}" method="POST">
+    <button type="submit">Excluir Tarefa</button>
+</form>
+{{#error}}
+<p>{{error}}</p>
+{{/error}}

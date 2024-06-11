@@ -1,0 +1,13 @@
+{{> layout }}
+<h1>Login</h1>
+<form action="/login" method="POST">
+    <label for="email">E-mail:</label>
+    <input type="email" name="email_usuario" required>
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha_usuario" required>
+    <button type="submit">Entrar</button>
+</form>
+<p>Não tem uma conta? <a href="/register">Cadastre-se</a></p>
+{{#error}}
+<p>{{error}}</p>
+{{/error}}

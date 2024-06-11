@@ -1,0 +1,16 @@
+{{> layout }}
+<h1>Cadastro</h1>
+<form action="/register" method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome_usuario" required>
+    <label for="email">E-mail:</label>
+    <input type="email" name="email_usuario" required>
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha_usuario" required>
+    <label for="confirmacao_senha">Confirmar Senha:</label>
+    <input type="password" name="confirmacao_senha" required>
+    <button type="submit">Cadastrar</button>
+</form>
+{{#error}}
+<p>{{error}}</p>
+{{/error}}
