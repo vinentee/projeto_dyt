@@ -13,8 +13,8 @@
 
     <header>
         <nav>
-            <a href="/lists" style="color: aliceblue;">Listas</a>
-            <a href="/logout" style="color: aliceblue;">Logout</a>
+            <a href="/lists" style="color:blueviolet; font-size: 20px;">Listas</a>
+            <a href="/logout" style="color:blueviolet; font-size: 20px;">Logout</a>
         </nav>
     </header>
 
@@ -32,16 +32,22 @@
                             <br><br><br><br>
                             <label for="titulo" class="form-label"
                                 style="color: aliceblue; font-size: 30px;">Título:</label>
-                            <input type="text" name="titulo_tarefa" value="{{task.titulo_tarefa}}" required>
+                            <input type="text" name="titulo_tarefa"
+                                style="color: aliceblue; background-color: black; border-color: blueviolet;"
+                                value="{{task.titulo_tarefa}}" required>
                             <br>
                             <br>
                             <label for="data" class="form-label" style="color: aliceblue; font-size: 30px;">Data de
                                 conclusão:</label>
-                            <input type="date" name="data_conclusao" value="{{task.data_conclusao}}">
+                            <input type="date" name="data_conclusao"
+                                style="color: aliceblue; background-color: black; border-color: blueviolet;"
+                                value="{{task.data_conclusao}}">
                             <br>
                             <br>
-                            <label for="concluida">Concluída:</label>
-                            <input type="checkbox" name="concluida" {{#task.concluida}}checked{{/task.concluida}}>
+                            <label for="concluida" style="color: aliceblue; font-size: 30px;">Concluída:</label>
+                            <input type="checkbox"
+                                style="color: aliceblue; background-color: black; border-color: blueviolet;"
+                                name="concluida" {{#task.concluida}}checked{{/task.concluida}}>
                             <br>
                             <br>
                             <br>

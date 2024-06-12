@@ -13,8 +13,8 @@ const Task = sequelize.define('Task', {
         allowNull: false
     },
     data_conclusao: {
-        type: DataTypes.DATE,
-        allowNull: true
+        type: DataTypes.STRING,
+        allowNull: true,
     },
     descricao: {
         type: DataTypes.TEXT,

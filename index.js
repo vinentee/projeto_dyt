@@ -27,6 +27,8 @@ const taskRoutes = require('./src/routes/taskRoutes');
 app.use('/', authRoutes);
 app.use('/lists', listRoutes);
 app.use('/tasks', taskRoutes);
+app.use('/css', express.static('./src/views/css'))
+app.use('/imagens', express.static('./src/views/imagens'))
 
 // Inicialização do servidor
 const PORT = process.env.PORT || 3000;

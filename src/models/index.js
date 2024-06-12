@@ -9,7 +9,7 @@ List.belongsTo(User, { foreignKey: 'id_usuario' });
 List.hasMany(Task, { foreignKey: 'id_lista' });
 Task.belongsTo(List, { foreignKey: 'id_lista' });
 
-sequelize.sync({ force: true }) // Use { force: true } apenas para desenvolvimento
+sequelize.sync({ force: false }) // Use { force: true } apenas para desenvolvimento
     .then(() => console.log('Database synced'))
     .catch(err => console.error('Error syncing database', err));
 

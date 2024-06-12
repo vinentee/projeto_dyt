@@ -19,7 +19,7 @@ exports.registerUser = async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(senha_usuario, 10);
         await User.create({ nome_usuario, email_usuario, senha_usuario: hashedPassword });
-        res.redirect('/login');
+        res.redirect('/');
     } catch (error) {
         res.render('register', { error: 'Erro ao criar o usuário.' });
     }
@@ -43,5 +43,5 @@ exports.loginUser = async (req, res) => {
 
 exports.logoutUser = (req, res) => {
     req.session.destroy();
-    res.redirect('/login');
+    res.redirect('/');
 };
