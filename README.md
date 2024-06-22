@@ -1,7 +1,9 @@
 # Sistema de Gerenciamento de Tarefas
 
-Este projeto é uma aplicação web simples para gerenciamento de tarefas pessoais e profissionais.
-
+Este projeto é uma aplicação web simples para gerenciamento de tarefas pessoais e profissionais. <br> <br>
+Alunos: <br>
+Gabriel de Oliveira Torezan <br>
+Gabriel Teixeira Vinente <br>
 ## Funcionalidades
 
 - **Cadastro de Usuário:** Novos usuários podem se cadastrar fornecendo um nome de usuário e senha.
